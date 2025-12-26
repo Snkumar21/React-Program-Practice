@@ -8,7 +8,17 @@
   </head>
   <body>
     <!--Below is the container element-->
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!--<div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>-->
+
+    <!-- Below is example of ES6 Arrow Function -->
+    <div id="demo"></div>
+    <script>
+      hello = () => {
+        return "Hello World!";
+      }
+
+      document.getElementById("demo").innerHTML = hello();
+    </script>
   </body>
 </html>
