@@ -3,13 +3,12 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
-
 // Example of basic...
-/*createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
   </StrictMode>,
-)*/
+)
 
 // Example of rendering with createRoot function...
 /*createRoot(document.getElementById('root')).render(
@@ -22,7 +21,7 @@ import App from './App.jsx'
 )*/
 
 // Example of Html Code rendering...
-const myelement = (
+/*const myelement = (
   <table>
     <tr>
       <th>Name</th>
@@ -38,4 +37,4 @@ const myelement = (
 
 createRoot(document.getElementById('root')).render(
   myelement
-)
+)*/
