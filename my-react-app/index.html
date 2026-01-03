@@ -59,12 +59,27 @@
     <!-- Below is teh example of Destructuring -->
     <p id="demo"></p>
 
-    <script>
+    <!--<script>
       const vehicles = ['mustang', 'f-150', 'expedition'];
       const [car, truck, suv] = vehicles;
 
       //You can now access each variable separately:
       document.getElementById('demo').innerHTML = truck;
+    </script>-->
+
+    <script>
+      function dateInfo(dat) {
+        const d = dat.getDate();
+        const m = dat.getMonth() + 1;
+        const y = dat.getFullYear();
+
+        return [d, m, y];
+      }
+
+      const [date, month, year] = dateInfo(new Date());
+
+      //You can now access each variable separately:
+      document.getElementById('demo').innerHTML = "The year is " + year;
     </script>
   </body>
 </html>
