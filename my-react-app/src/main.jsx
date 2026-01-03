@@ -4,11 +4,11 @@ import './index.css'
 import App from './App.jsx'
 
 // Example of basic...
-createRoot(document.getElementById('root')).render(
+/*createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
   </StrictMode>,
-)
+)*/
 
 // Example of rendering with createRoot function...
 /*createRoot(document.getElementById('root')).render(
@@ -34,7 +34,23 @@ createRoot(document.getElementById('root')).render(
     </tr>
   </table>
 )
-
 createRoot(document.getElementById('root')).render(
   myelement
 )*/
+
+// Example of map() in react
+const fruitlist = ['apple', 'banana', 'cherry'];
+
+function MyList() {
+  return (
+    <ul>
+      {fruitlist.map(fruit => 
+        <li key={fruit}>{fruit}</li>
+      )}
+    </ul>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <MyList />
+)
