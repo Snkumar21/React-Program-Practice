@@ -56,7 +56,7 @@
       document.getElementById("demo").innerHTML = doubled;
     </script>-->
 
-    <!-- Below is teh example of Destructuring -->
+    <!-- Below is the example of Destructuring -->
     <p id="demo"></p>
 
     <!--<script>
@@ -67,7 +67,8 @@
       document.getElementById('demo').innerHTML = truck;
     </script>-->
 
-    <script>
+    <!-- Below is the example of destructuring date format. -->
+    <!--<script>
       function dateInfo(dat) {
         const d = dat.getDate();
         const m = dat.getMonth() + 1;
@@ -80,6 +81,21 @@
 
       //You can now access each variable separately:
       document.getElementById('demo').innerHTML = "The year is " + year;
+    </script>-->
+
+    <!-- Below is the example of destructuring objects -->
+    <script>
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50
+      };
+
+      // Destructuring
+      let {firstName, lastName, age} = person;
+
+      //You can now access each variable separately:
+      document.getElementById("demo").innerHTML = firstName;
     </script>
   </body>
 </html>
