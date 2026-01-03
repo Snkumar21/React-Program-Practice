@@ -40,7 +40,6 @@ createRoot(document.getElementById('root')).render(
 
 // Example of map() in react...
 /*const fruitlist = ['apple', 'banana', 'cherry'];
-
 function MyList() {
   return (
     <ul>
@@ -50,18 +49,16 @@ function MyList() {
     </ul>
   );
 }
-
 createRoot(document.getElementById('root')).render(
   <MyList />
 )*/
 
 // Example of map() with object...
-const users = [
+/*const users = [
   { id: 1, name: 'John', age: 30 },
   { id: 2, name: 'Jane', age: 25 },
   { id: 3, name: 'Bob', age: 35 }
 ];
-
 function UserList() {
   return (
     <ul>
@@ -73,7 +70,25 @@ function UserList() {
     </ul>
   );
 }
-
 createRoot(document.getElementById('root')).render(
   <UserList />
+)*/
+
+// Example of map() parameters
+const fruitlist = ['apple', 'banana', 'cherry'];
+function MyApp() {
+  return (
+    <ul>
+      {fruitlist.map((fruit, index, array) => {
+        return (
+          <li key={fruit}>
+            Number: {fruit}, Index: {index}, Array: {array}
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+createRoot(document.getElementById('root')).render(
+  <MyApp />
 )
