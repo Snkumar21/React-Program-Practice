@@ -22,7 +22,7 @@
     </script>-->
 
     <!-- Below is example of ES6 Arrow function with this keyword -->
-    <h1>Regular Function</h1>
+    <!--<h1>Regular Function</h1>
 
     <p>The <strong>this</strong> keyword represents different objects depending on how the function was called.</p>
 
@@ -53,6 +53,16 @@
       //A button object calls the function:
       document.getElementById("btn").addEventListener("click", myheader.changeColor);
 
+    </script>-->
+
+    <!-- Below is the example of map() method -->
+    <div id="demo"></div>
+
+    <script>
+      const numbers = [1, 2, 3, 4];
+      const doubled = numbers.map(x => x * 2);
+
+      document.getElementById("demo").innerHTML = doubled;
     </script>
   </body>
 </html>
