@@ -8,8 +8,8 @@
   </head>
   <body>
     <!--Below is the container element-->
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!--<div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>-->
 
     <!-- Below is example of ES6 Arrow Function -->
     <!--<div id="demo"></div>
@@ -23,15 +23,10 @@
 
     <!-- Below is example of ES6 Arrow function with this keyword -->
     <!--<h1>Regular Function</h1>
-
     <p>The <strong>this</strong> keyword represents different objects depending on how the function was called.</p>
-
     <button id="btn">Click Me!</button>
-
     <p><strong>this</strong> represents:</p>
-
     <p id="demo"></p>
-
     <p>See the difference before and after the button is clicked.</p>
 
     <script>
@@ -39,12 +34,10 @@
         constructor() {
           this.color = "Red";
         }
-
         changeColor = function() {
           document.getElementById("demo").innerHTML += this;
         }
       }
-
       const myheader = new Header();
 
       //The window object calls the function:
@@ -52,7 +45,6 @@
 
       //A button object calls the function:
       document.getElementById("btn").addEventListener("click", myheader.changeColor);
-
     </script>-->
 
     <!-- Below is the example of map() method -->
@@ -61,8 +53,18 @@
     <script>
       const numbers = [1, 2, 3, 4];
       const doubled = numbers.map(x => x * 2);
-
       document.getElementById("demo").innerHTML = doubled;
     </script>-->
+
+    <!-- Below is teh example of Destructuring -->
+    <p id="demo"></p>
+
+    <script>
+      const vehicles = ['mustang', 'f-150', 'expedition'];
+      const [car, truck, suv] = vehicles;
+
+      //You can now access each variable separately:
+      document.getElementById('demo').innerHTML = truck;
+    </script>
   </body>
 </html>
