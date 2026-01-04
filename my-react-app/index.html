@@ -57,9 +57,9 @@
     </script>-->
 
     <!-- Below is the example of Destructuring -->
-    <!--<p id="demo"></p>
+    <p id="demo"></p>
 
-    <script>
+    <!--<script>
       const vehicles = ['mustang', 'f-150', 'expedition'];
       const [car, truck, suv] = vehicles;
 
@@ -108,7 +108,7 @@
     </script>-->
 
     <!-- Below is the example of Spread Operator using Object -->
-    <script>
+    <!--<script>
       const myVehicle = {
         brand: 'Ford',
         model: 'Mustang',
@@ -124,6 +124,13 @@
       console.log(myUpdatedVehicle);
     </script>
 
-    <p>Press F12 and see the result object in the console view.</p>
+    <p>Press F12 and see the result object in the console view.</p>-->
+
+    <script type="module">
+      import { name, age } from "./person.js";
+
+      document.getElementById("demo").innerHTML = "My name is " + name;
+      document.getElementById("demo").innerHTML += ", I am " + age + ".";
+    </script>
   </body>
 </html>
