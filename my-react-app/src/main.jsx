@@ -1,7 +1,5 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, useState } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
 
 // Example of basic...
 /*createRoot(document.getElementById('root')).render(
@@ -94,10 +92,26 @@ createRoot(document.getElementById('root')).render(
 )*/
 
 // Example of using Props Destructuring...
-function Greeting({ name, age }) {
+/*function Greeting({ name, age }) {
   return <h1>Hello, {name}! You are {age} years old.</h1>;
 }
   
 createRoot(document.getElementById('root')).render(
-  <Greeting name="John" age={25} />
+  <Greeting name="Nitish" age={23} />
+);*/
+
+// Example of useState Hook Destructuring...
+export function Counter() {
+  // Destructuring the array returned by useState
+  const [count, setCount] = useState(0);
+  
+  return (
+    <button onClick={() => setCount(count + 1)}>
+      Count: {count}
+    </button>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Counter />
 );
