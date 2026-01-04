@@ -57,9 +57,9 @@
     </script>-->
 
     <!-- Below is the example of Destructuring -->
-    <p id="demo"></p>
+    <!--<p id="demo"></p>
 
-    <!--<script>
+    <script>
       const vehicles = ['mustang', 'f-150', 'expedition'];
       const [car, truck, suv] = vehicles;
 
@@ -126,11 +126,35 @@
 
     <p>Press F12 and see the result object in the console view.</p>-->
 
-    <script type="module">
+    <!-- Below is the example of import module-->
+    <!--<script type="module">
       import { name, age } from "./person.js";
 
       document.getElementById("demo").innerHTML = "My name is " + name;
       document.getElementById("demo").innerHTML += ", I am " + age + ".";
-    </script>
+    </script>-->
+
+    <h1 id="demo"></h1>
+
+<script>
+function renderApp() {
+  document.getElementById("demo").innerHTML = "Welcome!";
+}
+
+function renderLogin() {
+  document.getElementById("demo").innerHTML = "Please log in";
+}
+
+let authenticated = true;
+
+if (authenticated) {
+  renderApp();
+} else {
+  renderLogin();
+}
+
+</script>
+
+<p>Try changing the "authenticated" variable to false, and run the code to see what happens.</p>
   </body>
 </html>
