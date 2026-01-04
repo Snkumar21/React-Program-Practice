@@ -75,7 +75,7 @@ createRoot(document.getElementById('root')).render(
 )*/
 
 // Example of map() parameters
-const fruitlist = ['apple', 'banana', 'cherry'];
+/*const fruitlist = ['apple', 'banana', 'cherry'];
 function MyApp() {
   return (
     <ul>
@@ -91,4 +91,13 @@ function MyApp() {
 }
 createRoot(document.getElementById('root')).render(
   <MyApp />
-)
+)*/
+
+// Example of using Props Destructuring...
+function Greeting({ name, age }) {
+  return <h1>Hello, {name}! You are {age} years old.</h1>;
+}
+  
+createRoot(document.getElementById('root')).render(
+  <Greeting name="John" age={25} />
+);
