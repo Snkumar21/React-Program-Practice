@@ -101,7 +101,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of useState Hook Destructuring...
-export function Counter() {
+/*export function Counter() {
   // Destructuring the array returned by useState
   const [count, setCount] = useState(0);
   
@@ -114,4 +114,4 @@ export function Counter() {
 
 createRoot(document.getElementById('root')).render(
   <Counter />
-);
+);*/

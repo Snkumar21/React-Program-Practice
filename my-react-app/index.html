@@ -8,8 +8,8 @@
   </head>
   <body>
     <!--Below is the container element-->
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!--<div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>-->
 
     <!-- Below is example of ES6 Arrow Function -->
     <!--<div id="demo"></div>
@@ -97,5 +97,14 @@
       //You can now access each variable separately:
       document.getElementById("demo").innerHTML = firstName;
     </script>-->
+
+    <!-- Below is example of Spread Operator -->
+    <script>
+      const numbersOne = [1, 2, 3];
+      const numbersTwo = [4, 5, 6];
+      const numbersCombined = [...numbersOne, ...numbersTwo];
+
+      document.write(numbersCombined);
+    </script>
   </body>
 </html>
