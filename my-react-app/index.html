@@ -134,27 +134,24 @@
       document.getElementById("demo").innerHTML += ", I am " + age + ".";
     </script>-->
 
+    <!-- Below is the example of Ternary Operator -->
     <h1 id="demo"></h1>
+    <script>
+      function renderApp() {
+        document.getElementById("demo").innerHTML = "Welcome!";
+      }
+      function renderLogin() {
+        document.getElementById("demo").innerHTML = "Please log in";
+      }
 
-<script>
-function renderApp() {
-  document.getElementById("demo").innerHTML = "Welcome!";
-}
+      let authenticated = true;
 
-function renderLogin() {
-  document.getElementById("demo").innerHTML = "Please log in";
-}
-
-let authenticated = true;
-
-if (authenticated) {
-  renderApp();
-} else {
-  renderLogin();
-}
-
-</script>
-
-<p>Try changing the "authenticated" variable to false, and run the code to see what happens.</p>
+      if (authenticated) {
+        renderApp();
+      } else {
+        renderLogin();
+      }
+    </script>
+    <p>Try changing the "authenticated" variable to false, and run the code to see what happens.</p>
   </body>
 </html>
