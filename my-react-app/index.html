@@ -135,7 +135,7 @@
     </script>-->
 
     <!-- Below is the example of Ternary Operator -->
-    <h1 id="demo"></h1>
+    <!--<h1 id="demo"></h1>
     <script>
       function renderApp() {
         document.getElementById("demo").innerHTML = "Welcome!";
@@ -152,6 +152,18 @@
         renderLogin();
       }
     </script>
-    <p>Try changing the "authenticated" variable to false, and run the code to see what happens.</p>
+    <p>Try changing the "authenticated" variable to false, and run the code to see what happens.</p>-->
+
+    <h1>Example</h1>
+    <p>With template strings you can write strings that span multiple lines and include embedded expressions:</p>
+    <div id="demo"></div>
+    <script>
+      const name = "Nitish";
+      const age = 23;
+      const message = `Hello, ${name}!
+      You are ${age} years old.`;
+
+      document.getElementById("demo").innerHTML = message;
+    </script>
   </body>
 </html>
