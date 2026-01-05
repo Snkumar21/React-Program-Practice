@@ -198,7 +198,7 @@
     </script>-->
 
     <!-- Below is the example of Template Strings Expression Interpolation -->
-    <h1>Example</h1>
+    <!--<h1>Example</h1>
     <p>With template strings you can execute expressions inside ${} brackets:</p>
     <div id="demo"></div>
     <script>
@@ -208,6 +208,20 @@
       let total = `Total: ${price * quantity}`;
 
       document.getElementById("demo").innerHTML = total;
+    </script>-->
+
+    <!-- Below is the example of Tagged Templates -->
+    <h1>Example</h1>
+    <p>You can use the tagged template inside a template string:</p>
+    <div id="demo"></div>
+    <script>
+      function highlight(strings, fname) {
+        let x = fname.toUpperCase();
+        return strings[0] + x + strings[1];
+      }
+      let name = "John";
+      let text = highlight`Hello ${name}, how are you?`;
+      document.getElementById("demo").innerHTML = text;
     </script>
   </body>
 </html>
