@@ -167,8 +167,8 @@
       document.getElementById("demo").innerHTML = message;
     </script>-->
 
-    <!-- Below is the example of Template Strings with backstick -->
-    <h1>Example</h1>
+    <!-- Below is the example of Template Strings with backticks -->
+    <!--<h1>Example</h1>
     <p>With template strings you can write strings that span multiple lines:</p>
     <div id="demo"></div>
     <script>
@@ -180,6 +180,21 @@
       `;
 
       document.getElementById("demo").innerHTML = html;
+    </script>-->
+
+    <!-- Below is the example of Template Strings in indentation in multi-line strings-->
+    <h1>Example</h1>
+    <p>With template strings, the indentation is part of the string.</p>
+    <p>This is not visible for most HTML elements, but the PRE element preservers any spaces and new lines:</p>
+    <pre id="demo"></pre>
+    <script>
+      const x = `
+        John:
+          Hello, how are you?
+        Jane:
+          I'm fine, thanks!
+      `;
+      document.getElementById("demo").innerHTML = x;
     </script>
   </body>
 </html>
