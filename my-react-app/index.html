@@ -154,7 +154,8 @@
     </script>
     <p>Try changing the "authenticated" variable to false, and run the code to see what happens.</p>-->
 
-    <h1>Example</h1>
+    <!-- Below is the example of Template Strings -->
+    <!--<h1>Example</h1>
     <p>With template strings you can write strings that span multiple lines and include embedded expressions:</p>
     <div id="demo"></div>
     <script>
@@ -164,6 +165,21 @@
       You are ${age} years old.`;
 
       document.getElementById("demo").innerHTML = message;
+    </script>-->
+
+    <!-- Below is the example of Template Strings with backstick -->
+    <h1>Example</h1>
+    <p>With template strings you can write strings that span multiple lines:</p>
+    <div id="demo"></div>
+    <script>
+      const html = `
+        <div>
+          <h1>Title</h1>
+          <p>Paragraph</p>
+        </div>
+      `;
+
+      document.getElementById("demo").innerHTML = html;
     </script>
   </body>
 </html>
