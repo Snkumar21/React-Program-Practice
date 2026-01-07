@@ -164,12 +164,19 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Wrap two paragraphs inside a fragment.
-const myElement = (
+/*const myElement = (
   <>
     <p>I am a paragraph.</p>
     <p>I am a paragraph too.</p>
   </>
 );
+
+createRoot(document.getElementById('root')).render(
+  myElement
+);*/
+
+// Example of elements must be closed.
+const myElement = <input type="text" />;
 
 createRoot(document.getElementById('root')).render(
   myElement
