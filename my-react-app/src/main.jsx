@@ -1,4 +1,5 @@
-import { createRoot, useState } from 'react-dom/client'
+import React from 'react';
+import { createRoot } from 'react-dom/client'
 import './index.css'
 
 // Example of basic...
@@ -117,7 +118,14 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of JSX in react.
-const myElement = <h1>I Love JSX!</h1>;
+/*const myElement = <h1>I Love JSX!</h1>;
+
+createRoot(document.getElementById('root')).render(
+  myElement
+);*/
+
+// Example of without JSX in react.
+const myElement = React.createElement('h1', {}, 'I do not use JSX!');
 
 createRoot(document.getElementById('root')).render(
   myElement
