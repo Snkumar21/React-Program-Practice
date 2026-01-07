@@ -115,3 +115,10 @@ createRoot(document.getElementById('root')).render(
 createRoot(document.getElementById('root')).render(
   <Counter />
 );*/
+
+// Example of JSX in react.
+const myElement = <h1>I Love JSX!</h1>;
+
+createRoot(document.getElementById('root')).render(
+  myElement
+);
