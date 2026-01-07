@@ -152,11 +152,23 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of One Top Level Element.
-const myElement = (
+/*const myElement = (
   <div>
     <p>I am a paragraph.</p>
     <p>I am a paragraph too.</p>
   </div>
+);
+
+createRoot(document.getElementById('root')).render(
+  myElement
+);*/
+
+// Example of Wrap two paragraphs inside a fragment.
+const myElement = (
+  <>
+    <p>I am a paragraph.</p>
+    <p>I am a paragraph too.</p>
+  </>
 );
 
 createRoot(document.getElementById('root')).render(
