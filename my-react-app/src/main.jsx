@@ -139,12 +139,24 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of inserting a larger block of HTML.
-const myElement = (
+/*const myElement = (
   <ul>
     <li>Apples</li>
     <li>Bananas</li>
     <li>Cherries</li>
   </ul>
+);
+
+createRoot(document.getElementById('root')).render(
+  myElement
+);*/
+
+// Example of One Top Level Element.
+const myElement = (
+  <div>
+    <p>I am a paragraph.</p>
+    <p>I am a paragraph too.</p>
+  </div>
 );
 
 createRoot(document.getElementById('root')).render(
