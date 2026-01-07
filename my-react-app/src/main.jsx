@@ -132,7 +132,20 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Expression in JSX.
-const myElement = <h1>React is {5 + 5} times better with JSX</h1>;
+/*const myElement = <h1>React is {5 + 5} times better with JSX</h1>;
+
+createRoot(document.getElementById('root')).render(
+  myElement
+);*/
+
+// Example of inserting a larger block of HTML.
+const myElement = (
+  <ul>
+    <li>Apples</li>
+    <li>Bananas</li>
+    <li>Cherries</li>
+  </ul>
+);
 
 createRoot(document.getElementById('root')).render(
   myElement
