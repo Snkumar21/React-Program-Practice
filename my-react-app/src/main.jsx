@@ -190,8 +190,22 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Comments in JSX.
-const myElement = <h1>Hello {/* Wonderful */} World </h1>;
+/*const myElement = <h1>Hello { Wonderful } World </h1>;
 
 createRoot(document.getElementById('root')).render(
   myElement
+);*/
+
+// Example of JSX in React Components.
+function Car() {
+  return (
+    <>
+      <h2>My Car</h2>
+      <p>It is a Ford Mustang.</p>
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car />
 );
