@@ -183,7 +183,14 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of attribute className instead of class in JSX.
-const myElement = <h1 className="myclass">Hello World</h1>;
+/*const myElement = <h1 className="myclass">Hello World</h1>;
+
+createRoot(document.getElementById('root')).render(
+  myElement
+);*/
+
+// Example of Comments in JSX.
+const myElement = <h1>Hello {/* Wonderful */} World </h1>;
 
 createRoot(document.getElementById('root')).render(
   myElement
