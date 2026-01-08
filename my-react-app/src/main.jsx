@@ -197,11 +197,25 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of JSX in React Components.
-function Car() {
+/*function Car() {
   return (
     <>
       <h2>My Car</h2>
       <p>It is a Ford Mustang.</p>
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car />
+);*/
+
+// Example of React JSX Expressions...
+function Car() {
+  return (
+    <>
+      <h1>My car</h1>
+      <p>It has {218 * 1.36} horsepower</p>
     </>
   );
 }
