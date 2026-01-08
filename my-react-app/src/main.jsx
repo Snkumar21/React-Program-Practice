@@ -176,7 +176,14 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of elements must be closed.
-const myElement = <input type="text" />;
+/*const myElement = <input type="text" />;
+
+createRoot(document.getElementById('root')).render(
+  myElement
+);*/
+
+// Example of attribute className instead of class in JSX.
+const myElement = <h1 className="myclass">Hello World</h1>;
 
 createRoot(document.getElementById('root')).render(
   myElement
