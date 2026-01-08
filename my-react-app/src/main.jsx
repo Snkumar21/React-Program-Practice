@@ -211,11 +211,26 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of React JSX Expressions...
-function Car() {
+/*function Car() {
   return (
     <>
       <h1>My car</h1>
       <p>It has {218 * 1.36} horsepower</p>
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car />
+);*/
+
+// Example of variables in JSX.
+function Car() {
+  const hp = 218 * 1.36;
+  return (
+    <>
+      <h1>My car</h1>
+      <p>It has {hp} horsepower</p>
     </>
   );
 }
