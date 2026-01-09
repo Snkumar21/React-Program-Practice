@@ -276,12 +276,26 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of camelCase event attributes.
-function Car() {
+/*function Car() {
   const myfunc = () => {
     alert('Hello World');
   };
   return (
     <button onClick={myfunc}>Click me</button>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car />
+);*/
+
+// Example of Boolean Attributes in React.
+function Car() {
+  const myfunc = () => {
+    alert('Hello World');
+  };
+  return (
+    <button onClick={myfunc} disabled>Click me</button>
   );
 }
 
