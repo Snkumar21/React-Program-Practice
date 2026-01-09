@@ -258,7 +258,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Object Properties in JSX.
-function Car() {
+/*function Car() {
   const myobj = {
     name: "Fiat",
     model: "500",
@@ -268,6 +268,20 @@ function Car() {
     <>
       <h1>My car is a {myobj.color} {myobj.name} {myobj.model}</h1>
     </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car />
+);*/
+
+// Example of camelCase event attributes.
+function Car() {
+  const myfunc = () => {
+    alert('Hello World');
+  };
+  return (
+    <button onClick={myfunc}>Click me</button>
   );
 }
 
