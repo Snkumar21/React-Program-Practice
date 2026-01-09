@@ -240,7 +240,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Function calls in JSX.
-function kwtohp(kw) {
+/*function kwtohp(kw) {
   return kw * 1.36;
 }
 
@@ -249,6 +249,24 @@ function Car() {
     <>
       <h1>My car</h1>
       <p>It has {kwtohp(218)} horsepower</p>
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car />
+);*/
+
+// Example of Object Properties in JSX.
+function Car() {
+  const myobj = {
+    name: "Fiat",
+    model: "500",
+    color: "white"
+  };
+  return (
+    <>
+      <h1>My car is a {myobj.color} {myobj.name} {myobj.model}</h1>
     </>
   );
 }
