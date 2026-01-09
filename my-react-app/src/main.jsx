@@ -304,7 +304,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Boolean Attribute return False.
-function Car() {
+/*function Car() {
   const myfunc = () => {
     alert('Hello World');
   };
@@ -313,6 +313,24 @@ function Car() {
   );
 }
 
+createRoot(document.getElementById('root')).render(
+  <Car />
+);*/
+
+// Example of style attribute
+function Car() {
+  const mystyles = {
+    color: "red",
+    fontSize: "20px",
+    backgroundColor: "lightyellow",
+  };
+
+  return (
+    <>
+      <h1 style={mystyles}>My car</h1>
+    </>
+  );
+}
 createRoot(document.getElementById('root')).render(
   <Car />
 );
