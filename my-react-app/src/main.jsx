@@ -318,7 +318,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of style attribute
-function Car() {
+/*function Car() {
   const mystyles = {
     color: "red",
     fontSize: "20px",
@@ -333,4 +333,21 @@ function Car() {
 }
 createRoot(document.getElementById('root')).render(
   <Car />
+);*/
+
+// Example of React JSX IF Statement
+function Fruit() {
+  const x = 5;
+  let y = "Apple";
+  if (x < 10) {
+    y = "Banana";
+  }
+
+  return (
+    <h1>{y}</h1>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Fruit />
 );
