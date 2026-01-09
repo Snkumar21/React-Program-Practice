@@ -225,12 +225,30 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of variables in JSX.
-function Car() {
+/*function Car() {
   const hp = 218 * 1.36;
   return (
     <>
       <h1>My car</h1>
       <p>It has {hp} horsepower</p>
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car />
+);*/
+
+// Example of Function calls in JSX.
+function kwtohp(kw) {
+  return kw * 1.36;
+}
+
+function Car() {
+  return (
+    <>
+      <h1>My car</h1>
+      <p>It has {kwtohp(218)} horsepower</p>
     </>
   );
 }
