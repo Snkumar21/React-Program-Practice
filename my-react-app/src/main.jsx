@@ -1,5 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client'
+import Car from './document/vehicle.jsx';
 import './index.css'
 
 // Example of basic...
@@ -406,7 +407,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of rendering a component twice.
-function Car() {
+/*function Car() {
   return (
     <h2>I am a Car!</h2>
   );
@@ -424,4 +425,9 @@ function Garage() {
 
 createRoot(document.getElementById('root')).render(
   <Garage />
+);*/
+
+// Example of Components in file.
+createRoot(document.getElementById('root')).render(
+  <Car />
 );
