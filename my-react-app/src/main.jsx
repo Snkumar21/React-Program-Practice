@@ -428,6 +428,27 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Components in file.
-createRoot(document.getElementById('root')).render(
+/*createRoot(document.getElementById('root')).render(
   <Car />
+);*/
+
+// Example of rendering a component twice with different names.
+function Car(props) {
+  return (
+    <h2>I am a {props.brand}!</h2>
+  );
+}
+
+function Garage() {
+  return (
+    <>
+      <h1>Who lives in my Garage?</h1>
+      <Car brand="Ford" />
+      <Car brand="BMW" />
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Garage />
 );
