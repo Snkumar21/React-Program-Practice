@@ -364,7 +364,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Rendering a Component.
-function Car() {
+/*function Car() {
   return (
     <h2>Hi, I am a Car!</h2>
   );
@@ -372,4 +372,15 @@ function Car() {
 
 createRoot(document.getElementById('root')).render(
   <Car />
+);*/
+
+// Example of Props
+function Car(props) {
+  return (
+    <h2>I am a {props.color} Car!</h2>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car color="red"/>
 );
