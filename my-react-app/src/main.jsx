@@ -386,6 +386,26 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of components in components.
+/*function Car() {
+  return (
+    <h2>I am a Car!</h2>
+  );
+}
+
+function Garage() {
+  return (
+    <>
+      <h1>Who lives in my Garage?</h1>
+      <Car />
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Garage />
+);*/
+
+// Example of rendering a component twice.
 function Car() {
   return (
     <h2>I am a Car!</h2>
@@ -396,6 +416,7 @@ function Garage() {
   return (
     <>
       <h1>Who lives in my Garage?</h1>
+      <Car />
       <Car />
     </>
   );
