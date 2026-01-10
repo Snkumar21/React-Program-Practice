@@ -352,7 +352,7 @@ createRoot(document.getElementById('root')).render(
   <Fruit />
 );*/
 
-function Fruit() {
+/*function Fruit() {
   const x = 5;
   return (
     <h1>{(x) < 10 ? "Banana" : "Apple"}</h1>
@@ -361,4 +361,15 @@ function Fruit() {
 
 createRoot(document.getElementById('root')).render(
   <Fruit />
+);*/
+
+// Example of Rendering a Component.
+function Car() {
+  return (
+    <h2>Hi, I am a Car!</h2>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car />
 );
