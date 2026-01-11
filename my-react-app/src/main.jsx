@@ -505,7 +505,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Components in Components.
-class Car extends React.Component {
+/*class Car extends React.Component {
   render() {
     return <h2>I am a Car!</h2>;
   }
@@ -524,4 +524,9 @@ class Garage extends React.Component {
 
 createRoot(document.getElementById('root')).render(
   <Garage />
+);*/
+
+// Example of Components in Files.
+createRoot(document.getElementById('root')).render(
+  <Car />
 );
