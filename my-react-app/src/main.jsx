@@ -449,6 +449,17 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Components in file.
+/*createRoot(document.getElementById('root')).render(
+  <Car />
+);*/
+
+// Example of Display of Car components in the root element.
+class Car extends React.Component {
+  render() {
+    return <h2>Hi, I am a Car!</h2>;
+  }
+}
+
 createRoot(document.getElementById('root')).render(
   <Car />
 );
