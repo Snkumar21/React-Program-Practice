@@ -465,7 +465,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Component Constructor
-class Car extends React.Component {
+/*class Car extends React.Component {
   constructor() {
     super();
     this.state = {color: "red"};
@@ -477,4 +477,15 @@ class Car extends React.Component {
 
 createRoot(document.getElementById('root')).render(
   <Car />
+);*/
+
+// Example of Props
+class Car extends React.Component {
+  render() {
+    return <h2>I am a {this.props.color} Car!</h2>;
+  }
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car color="red"/>
 );
