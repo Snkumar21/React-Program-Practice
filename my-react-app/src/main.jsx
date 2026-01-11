@@ -491,7 +491,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Props in the Constructor
-class Car extends React.Component {
+/*class Car extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -502,4 +502,26 @@ class Car extends React.Component {
 
 createRoot(document.getElementById('root')).render(
   <Car model="Mustang"/>
+);*/
+
+// Example of Components in Components.
+class Car extends React.Component {
+  render() {
+    return <h2>I am a Car!</h2>;
+  }
+}
+
+class Garage extends React.Component {
+  render() {
+    return (
+      <div>
+      <h1>Who lives in my Garage?</h1>
+      <Car />
+      </div>
+    );
+  }
+}
+
+createRoot(document.getElementById('root')).render(
+  <Garage />
 );
