@@ -480,7 +480,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Props
-class Car extends React.Component {
+/*class Car extends React.Component {
   render() {
     return <h2>I am a {this.props.color} Car!</h2>;
   }
@@ -488,4 +488,18 @@ class Car extends React.Component {
 
 createRoot(document.getElementById('root')).render(
   <Car color="red"/>
+);*/
+
+// Example of Props in the Constructor
+class Car extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return <h2>I am a {this.props.model}!</h2>;
+  }
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car model="Mustang"/>
 );
