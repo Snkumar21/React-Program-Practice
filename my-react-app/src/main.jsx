@@ -634,10 +634,32 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of simple component with a simple render() method
-class Header extends React.Component {
+/*class Header extends React.Component {
   render() {
     return (
       <h1>This is the content of the Header component</h1>
+    );
+  }
+}
+
+createRoot(document.getElementById('root')).render(
+  <Header />
+);*/
+
+// Example of the componentDidMount()
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {favoritecolor: "red"};
+  }
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({favoritecolor: "yellow"})
+    }, 1000)
+  }
+  render() {
+    return (
+      <h1>My Favorite Color is {this.state.favoritecolor}</h1>
     );
   }
 }
