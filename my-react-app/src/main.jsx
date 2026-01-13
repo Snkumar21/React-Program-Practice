@@ -561,7 +561,7 @@ const root = ReactDOM.createRoot(container);
 root.render(<Car />);*/
 
 // Example of Changing the state Object
-class Car extends React.Component {
+/*class Car extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -594,4 +594,21 @@ class Car extends React.Component {
 
 createRoot(document.getElementById('root')).render(
   <Car />
+)*/
+
+// Example of The Constructor method.
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {favoritecolor: "red"};
+  }
+  render() {
+    return (
+      <h1>My Favorite Color is {this.state.favoritecolor}</h1>
+    );
+  }
+}
+
+createRoot(document.getElementById('root')).render(
+  <Header />
 )
