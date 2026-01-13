@@ -669,7 +669,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of the getDerivedStateFromProps() method
-class Header extends React.Component {
+/*class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {favoritecolor: "red"};
@@ -692,4 +692,30 @@ class Header extends React.Component {
 
 createRoot(document.getElementById('root')).render(
   <Header favcol="yellow" />
+);*/
+
+// Example of the shouldComponentUpdate() method returns true instead
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {favoritecolor: "red"};
+  }
+  shouldComponentUpdate() {
+    return true;
+  }
+  changeColor = () => {
+    this.setState({favoritecolor: "blue"});
+  }
+  render() {
+    return (
+      <div>
+      <h1>My Favorite Color is {this.state.favoritecolor}</h1>
+      <button type="button" onClick={this.changeColor}>Change color</button>
+      </div>
+    );
+  }
+}
+
+createRoot(document.getElementById('root')).render(
+  <Header />
 );
