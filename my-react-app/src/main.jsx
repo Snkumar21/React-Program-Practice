@@ -829,7 +829,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Send the brand attribute from the Garage component to the Car component
-function Car(props) {
+/*function Car(props) {
   return (
     <h2>I am a {props.brand}!</h2>
   );
@@ -846,4 +846,15 @@ function Garage() {
 
 createRoot(document.getElementById('root')).render(
   <Garage />
+);*/
+
+// Example of Destructuring Props
+function Car({color}) {
+  return (
+    <h2>My car is {color}!</h2>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car brand="Ford" model="Mustang" color="red" year={1969} />
 );
