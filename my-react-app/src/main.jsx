@@ -816,7 +816,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Use the indexes to access array properties
-function Car(props) {
+/*function Car(props) {
   return (
     <h2>My car is a {props.carinfo[0]} {props.carinfo[1]}!</h2>
   );
@@ -826,4 +826,24 @@ const carInfo = ["Ford", "Mustang"];
 
 createRoot(document.getElementById('root')).render(
   <Car carinfo={carInfo} />
+);*/
+
+// Example of Send the brand attribute from the Garage component to the Car component
+function Car(props) {
+  return (
+    <h2>I am a {props.brand}!</h2>
+  );
+}
+
+function Garage() {
+  return (
+    <>
+      <h1>Who lives in my garage?</h1>
+      <Car brand="Ford" />
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Garage />
 );
