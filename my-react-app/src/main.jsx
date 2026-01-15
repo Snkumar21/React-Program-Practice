@@ -695,7 +695,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of the shouldComponentUpdate() method returns true instead
-class Header extends React.Component {
+/*class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {favoritecolor: "red"};
@@ -718,4 +718,15 @@ class Header extends React.Component {
 
 createRoot(document.getElementById('root')).render(
   <Header />
+);*/
+
+// Example of React Props
+function Car(props) {
+  return (
+    <h2>I am a {props.brand}!</h2>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car brand="Ford" />
 );
