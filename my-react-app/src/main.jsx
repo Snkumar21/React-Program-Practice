@@ -882,7 +882,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Use the property values in the Car component.
-function Car(props) {
+/*function Car(props) {
   return (
     <h2>I am a {props.color} {props.brand} {props.model}!</h2>
   );
@@ -890,4 +890,15 @@ function Car(props) {
 
 createRoot(document.getElementById('root')).render(
   <Car brand="Ford" model="Mustang" color="red" />
+);*/
+
+// Example of Numbers has to be sent inside curly brackets to be treated as numbers.
+function Car(props) {
+  return (
+    <h2>The car is from {props.year}!</h2>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car year={1969} />
 );
