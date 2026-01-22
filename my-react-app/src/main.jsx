@@ -860,9 +860,20 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Use the brand attribute in the Car component.
-function Car(props) {
+/*function Car(props) {
   return (
     <h2>I am a {props.brand}!</h2>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car brand="Ford" />
+);*/
+
+// Example of use myobj instead of props in the component.
+function Car(myobj) {
+  return (
+    <h2>I am a {myobj.brand}!</h2>
   );
 }
 
