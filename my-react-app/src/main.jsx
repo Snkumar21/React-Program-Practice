@@ -967,8 +967,8 @@ createRoot(document.getElementById('root')).render(
   <Car carinfo={carInfo} />
 );*/
 
-// Example of Send the brand attribute from the Garage component to the Car component
-function Car(props) {
+// Example of Send the brand attribute from the Garage component to the Car component.
+/*function Car(props) {
   return (
     <h2>I am a {props.brand}!</h2>
   );
@@ -985,4 +985,15 @@ function Garage() {
 
 createRoot(document.getElementById('root')).render(
   <Garage />
+);*/
+
+// Example of the component knows it only need the color property, so in the function definition, it only specifies that.
+function Car({color}) {
+  return (
+    <h2>My car is {color}!</h2>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car brand="Ford" model="Mustang" color="red" year={1969} />
 );
