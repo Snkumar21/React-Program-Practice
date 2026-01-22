@@ -988,9 +988,21 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of the component knows it only need the color property, so in the function definition, it only specifies that.
-function Car({color}) {
+/*function Car({color}) {
   return (
     <h2>My car is {color}!</h2>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car brand="Ford" model="Mustang" color="red" year={1969} />
+);*/
+
+// Example of The component receives all the properties, but uses destructuring to limit the properties inside the component.
+function Car(props) {
+  const {brand, model} = props;
+  return (
+    <h2>I love my {brand} {model}!</h2>
   );
 }
 
