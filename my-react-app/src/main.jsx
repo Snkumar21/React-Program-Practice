@@ -849,7 +849,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Destructuring Props
-function Car({color}) {
+/*function Car({color}) {
   return (
     <h2>My car is {color}!</h2>
   );
@@ -857,4 +857,15 @@ function Car({color}) {
 
 createRoot(document.getElementById('root')).render(
   <Car brand="Ford" model="Mustang" color="red" year={1969} />
+);*/
+
+// Example of Use the brand attribute in the Car component.
+function Car(props) {
+  return (
+    <h2>I am a {props.brand}!</h2>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car brand="Ford" />
 );
