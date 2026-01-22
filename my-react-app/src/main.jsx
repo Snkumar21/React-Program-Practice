@@ -999,10 +999,21 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of The component receives all the properties, but uses destructuring to limit the properties inside the component.
-function Car(props) {
+/*function Car(props) {
   const {brand, model} = props;
   return (
     <h2>I love my {brand} {model}!</h2>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car brand="Ford" model="Mustang" color="red" year={1969} />
+);*/
+
+// Example of The component specifies the color and the brand, but the rest is stored in an object like this.
+function Car({color, brand, ...rest}) {
+  return (
+    <h2>My {brand} {rest.model} is {color}!</h2>
   );
 }
 
