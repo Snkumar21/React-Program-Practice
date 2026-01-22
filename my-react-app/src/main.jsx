@@ -917,7 +917,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Objects and Arrays has to be sent inside curly brackets
-function Car(props) {
+/*function Car(props) {
   return (
     <>
       <h2>My favorite car is a {props.carinfo.name} {props.carinfo.model}!</h2>
@@ -931,4 +931,25 @@ let y = {name: "Ford", model: "Mustang"};
 
 createRoot(document.getElementById('root')).render(
   <Car years={x} carinfo={y} />
+);*/
+
+// Example of Use the dot notation to access object properties.
+function Car(props) {
+  return (
+    <>
+      <h2>My {props.carinfo.name} {props.carinfo.model}!</h2>
+      <p>It is {props.carinfo.color} and it is from {props.carinfo.year}!</p>
+    </>
+  );
+}
+
+const carInfo = {
+  name: "Ford",
+  model: "Mustang",
+  color: "red",
+  year: 1969
+};
+
+createRoot(document.getElementById('root')).render(
+  <Car carinfo={carInfo} />
 );
