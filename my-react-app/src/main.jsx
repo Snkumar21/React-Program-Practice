@@ -871,7 +871,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of use myobj instead of props in the component.
-function Car(myobj) {
+/*function Car(myobj) {
   return (
     <h2>I am a {myobj.brand}!</h2>
   );
@@ -879,4 +879,15 @@ function Car(myobj) {
 
 createRoot(document.getElementById('root')).render(
   <Car brand="Ford" />
+);*/
+
+// Example of Use the property values in the Car component.
+function Car(props) {
+  return (
+    <h2>I am a {props.color} {props.brand} {props.model}!</h2>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car brand="Ford" model="Mustang" color="red" />
 );
