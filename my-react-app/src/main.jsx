@@ -1011,7 +1011,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of The component specifies the color and the brand, but the rest is stored in an object like this.
-function Car({color, brand, ...rest}) {
+/*function Car({color, brand, ...rest}) {
   return (
     <h2>My {brand} {rest.model} is {color}!</h2>
   );
@@ -1019,4 +1019,15 @@ function Car({color, brand, ...rest}) {
 
 createRoot(document.getElementById('root')).render(
   <Car brand="Ford" model="Mustang" color="red" year={1969} />
+);*/
+
+// Example of Set the default color value to "blue"
+function Car({color = "blue", brand}) {
+  return (
+    <h2>My {color} {brand}!</h2>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car brand="Ford" />
 );
