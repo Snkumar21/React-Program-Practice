@@ -934,7 +934,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Use the dot notation to access object properties.
-function Car(props) {
+/*function Car(props) {
   return (
     <>
       <h2>My {props.carinfo.name} {props.carinfo.model}!</h2>
@@ -949,6 +949,19 @@ const carInfo = {
   color: "red",
   year: 1969
 };
+
+createRoot(document.getElementById('root')).render(
+  <Car carinfo={carInfo} />
+);*/
+
+// Example of Use the indexes to access array properties
+function Car(props) {
+  return (
+    <h2>My car is a {props.carinfo[0]} {props.carinfo[1]}!</h2>
+  );
+}
+
+const carInfo = ["Ford", "Mustang"];
 
 createRoot(document.getElementById('root')).render(
   <Car carinfo={carInfo} />
