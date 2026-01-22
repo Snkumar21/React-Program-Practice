@@ -893,7 +893,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Numbers has to be sent inside curly brackets to be treated as numbers.
-function Car(props) {
+/*function Car(props) {
   return (
     <h2>The car is from {props.year}!</h2>
   );
@@ -901,4 +901,17 @@ function Car(props) {
 
 createRoot(document.getElementById('root')).render(
   <Car year={1969} />
+);*/
+
+// Example of Variables has to be sent inside curly brackets.
+function Car(props) {
+  return (
+    <h2>I am a {props.brand}!</h2>
+  );
+}
+
+let x = "Ford";
+
+createRoot(document.getElementById('root')).render(
+  <Car brand={x} />
 );
