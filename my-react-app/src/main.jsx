@@ -1033,7 +1033,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Props Children.
-function Son(props) {
+/*function Son(props) {
   return (
     <div style={{background: 'lightgreen'}}>
       <h2>Son</h2>
@@ -1074,4 +1074,19 @@ function Parent() {
 
 createRoot(document.getElementById('root')).render(
   <Parent />
+);*/
+
+// Example of shoot function inside the Football component
+function Football() {
+  const shoot = () => {
+    alert("Great Shot!");
+  }
+
+  return (
+    <button onClick={shoot}>Take the shot!</button>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Football />
 );
