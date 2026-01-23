@@ -1092,7 +1092,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Send "Goal!" as a parameter to the shoot function, using arrow function.
-function Football() {
+/*function Football() {
   const shoot = (a) => {
     alert(a);
   }
@@ -1104,4 +1104,23 @@ function Football() {
 
 createRoot(document.getElementById('root')).render(
   <Football />
-);
+);*/
+
+// Example of Arrow Function.
+function Football() {
+  const shoot = (a, b) => {
+    alert(b.type);
+    /*
+    'b' represents the React event that triggered the function,
+    in this case the 'click' event
+    */
+  }
+
+  return (
+    <button onClick={(event) => shoot("Goal!", event)}>Take the shot!</button>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Football />
+)
