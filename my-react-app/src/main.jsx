@@ -1076,14 +1076,29 @@ createRoot(document.getElementById('root')).render(
   <Parent />
 );*/
 
-// Example of shoot function inside the Football component
-function Football() {
+// Example of shoot function inside the Football component.
+/*function Football() {
   const shoot = () => {
     alert("Great Shot!");
   }
 
   return (
     <button onClick={shoot}>Take the shot!</button>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Football />
+);*/
+
+// Example of Send "Goal!" as a parameter to the shoot function, using arrow function.
+function Football() {
+  const shoot = (a) => {
+    alert(a);
+  }
+
+  return (
+    <button onClick={() => shoot("Goal!")}>Take the shot!</button>
   );
 }
 
