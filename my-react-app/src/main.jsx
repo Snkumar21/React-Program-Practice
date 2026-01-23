@@ -1107,13 +1107,13 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Arrow Function.
-function Football() {
+/*function Football() {
   const shoot = (a, b) => {
     alert(b.type);
-    /*
+    
     'b' represents the React event that triggered the function,
     in this case the 'click' event
-    */
+    
   }
 
   return (
@@ -1123,4 +1123,25 @@ function Football() {
 
 createRoot(document.getElementById('root')).render(
   <Football />
-)
+)*/
+
+// Example of the if JavaScript operator to decide which component to render.
+function MissedGoal() {
+  return <h1>MISSED!</h1>;
+}
+
+function MadeGoal() {
+  return <h1>Goal!</h1>;
+}
+
+function Goal(props) {
+  const isGoal = props.isGoal;
+  if (isGoal) {
+    return <MadeGoal/>;
+  }
+  return <MissedGoal/>;
+}
+
+createRoot(document.getElementById('root')).render(
+  <Goal isGoal={false} />
+);
