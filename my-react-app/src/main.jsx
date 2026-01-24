@@ -1126,7 +1126,7 @@ createRoot(document.getElementById('root')).render(
 )*/
 
 // Example of the if JavaScript operator to decide which component to render.
-function MissedGoal() {
+/*function MissedGoal() {
   return <h1>MISSED!</h1>;
 }
 
@@ -1144,4 +1144,25 @@ function Goal(props) {
 
 createRoot(document.getElementById('root')).render(
   <Goal isGoal={false} />
+);*/
+
+// Example of Try changing the isGoal attribute to true.
+function MissedGoal() {
+  return <h1>MISSED!</h1>;
+}
+
+function MadeGoal() {
+  return <h1>Goal!</h1>;
+}
+
+function Goal(props) {
+  const isGoal = props.isGoal;
+  if (isGoal) {
+    return <MadeGoal/>;
+  }
+  return <MissedGoal/>;
+}
+
+createRoot(document.getElementById('root')).render(
+  <Goal isGoal={true} />
 );
