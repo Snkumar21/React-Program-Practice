@@ -1194,7 +1194,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Return the MadeGoal component if isGoal is true, otherwise return the MissedGoal component.
-function MissedGoal() {
+/*function MissedGoal() {
   return <h1>MISSED!</h1>;
 }
 
@@ -1213,4 +1213,21 @@ function Goal(props) {
 
 createRoot(document.getElementById('root')).render(
   <Goal isGoal={false} />
+);*/
+
+// Example of create a simple list using the map() method.
+function MyCars() {
+  const cars = ['Ford', 'BMW', 'Audi'];
+  return (
+    <>
+      <h1>My Cars:</h1>
+      <ul>
+        {cars.map((car) => <li>I am a { car }</li>)}
+      </ul>
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <MyCars />
 );
