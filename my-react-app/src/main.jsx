@@ -1147,7 +1147,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Try changing the isGoal attribute to true.
-function MissedGoal() {
+/*function MissedGoal() {
   return <h1>MISSED!</h1>;
 }
 
@@ -1165,4 +1165,17 @@ function Goal(props) {
 
 createRoot(document.getElementById('root')).render(
   <Goal isGoal={true} />
+);*/
+
+// Example of right side of && will only be rendered if the left side is true.
+function Car(props) {
+  return (
+    <>
+      {props.brand && <h1>My car is a {props.brand}</h1>}
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car brand="Ford" />
 );
