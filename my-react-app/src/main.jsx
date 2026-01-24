@@ -1181,7 +1181,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Try emptying the brand property.
-function Car(props) {
+/*function Car(props) {
   return (
     <>
       {props.brand && <h1>My car is a {props.brand}</h1>}
@@ -1191,4 +1191,26 @@ function Car(props) {
 
 createRoot(document.getElementById('root')).render(
   <Car />
+);*/
+
+// Example of Return the MadeGoal component if isGoal is true, otherwise return the MissedGoal component.
+function MissedGoal() {
+  return <h1>MISSED!</h1>;
+}
+
+function MadeGoal() {
+  return <h1>Goal!</h1>;
+}
+
+function Goal(props) {
+  const isGoal = props.isGoal;
+  return (
+    <>
+      { isGoal ? <MadeGoal/> : <MissedGoal/> }
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Goal isGoal={false} />
 );
