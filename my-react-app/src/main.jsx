@@ -1168,7 +1168,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of right side of && will only be rendered if the left side is true.
-function Car(props) {
+/*function Car(props) {
   return (
     <>
       {props.brand && <h1>My car is a {props.brand}</h1>}
@@ -1178,4 +1178,17 @@ function Car(props) {
 
 createRoot(document.getElementById('root')).render(
   <Car brand="Ford" />
+);*/
+
+// Example of Try emptying the brand property.
+function Car(props) {
+  return (
+    <>
+      {props.brand && <h1>My car is a {props.brand}</h1>}
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Car />
 );
