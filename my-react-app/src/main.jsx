@@ -1233,7 +1233,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Keys in React Lists.
-function MyCars() {
+/*function MyCars() {
   const cars = [
     {id: 1001, brand: 'Ford'},
     {id: 1002, brand: 'BMW'},
@@ -1244,6 +1244,23 @@ function MyCars() {
       <h1>My Cars:</h1>
       <ul>
         {cars.map((car) => <li key={car.id}>I am a { car.brand }</li>)}
+      </ul>
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <MyCars />
+);*/
+
+// Example of Using array indexes as keys (not recommended for dynamic lists).
+function MyCars() {
+  const cars = ['Ford', 'BMW', 'Audi'];
+  return (
+    <>
+      <h1>My Cars:</h1>
+      <ul>
+        {cars.map((car, index) => <li key={index}>I am a { car }</li>)}
       </ul>
     </>
   );
