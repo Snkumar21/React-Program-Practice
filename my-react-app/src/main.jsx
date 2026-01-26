@@ -1330,7 +1330,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of React Form Submit.
-function MyForm() {
+/*function MyForm() {
   const [name, setName] = useState("");
 
   function handleChange(e) {
@@ -1355,6 +1355,31 @@ function MyForm() {
     </form>
   )
 }
+createRoot(document.getElementById('root')).render(
+  <MyForm />
+);*/
+
+// Example of React uses the value attribute to control the textarea.
+function MyForm() {
+  const [mytxt, setMytxt] = useState("");
+
+  function handleChange(e) {
+    setMytxt(e.target.value);
+  }
+
+  return (
+    <form>
+      <label>Write here:
+        <textarea
+          value={mytxt}
+          onChange={handleChange}
+        />
+      </label>
+      <p>Current value: {mytxt}</p>
+    </form>
+  )
+}
+
 createRoot(document.getElementById('root')).render(
   <MyForm />
 );
