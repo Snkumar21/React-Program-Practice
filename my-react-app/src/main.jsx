@@ -1286,8 +1286,30 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Use the useState Hook to manage the input.
-function MyForm() {
+/*function MyForm() {
   const [name, setName] = useState("");
+
+  return (
+    <form>
+      <label>Enter your name:
+        <input
+          type="text" 
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </label>
+      <p>Current value: {name}</p>
+    </form>
+  )
+}
+
+createRoot(document.getElementById('root')).render(
+  <MyForm />
+);*/
+
+// Example of Use initial value for name
+function MyForm() {
+  const [name, setName] = useState("John");
 
   return (
     <form>
