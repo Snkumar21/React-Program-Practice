@@ -1271,12 +1271,34 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Add a form that allows users to enter their name.
-function MyForm() {
+/*function MyForm() {
   return (
     <form>
       <label>Enter your name:
         <input type="text" />
       </label>
+    </form>
+  )
+}
+
+createRoot(document.getElementById('root')).render(
+  <MyForm />
+);*/
+
+// Example of Use the useState Hook to manage the input.
+function MyForm() {
+  const [name, setName] = useState("");
+
+  return (
+    <form>
+      <label>Enter your name:
+        <input
+          type="text" 
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </label>
+      <p>Current value: {name}</p>
     </form>
   )
 }
