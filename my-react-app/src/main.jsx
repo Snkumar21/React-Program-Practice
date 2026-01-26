@@ -1308,7 +1308,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Use initial value for name
-function MyForm() {
+/*function MyForm() {
   const [name, setName] = useState("John");
 
   return (
@@ -1325,6 +1325,36 @@ function MyForm() {
   )
 }
 
+createRoot(document.getElementById('root')).render(
+  <MyForm />
+);*/
+
+// Example of React Form Submit.
+function MyForm() {
+  const [name, setName] = useState("");
+
+  function handleChange(e) {
+    setName(e.target.value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    alert(name);
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>Enter your name:
+        <input
+          type="text" 
+          value={name}
+          onChange={handleChange}
+        />
+      </label>
+      <input type="submit" />
+    </form>
+  )
+}
 createRoot(document.getElementById('root')).render(
   <MyForm />
 );
