@@ -1254,7 +1254,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Using array indexes as keys (not recommended for dynamic lists).
-function MyCars() {
+/*function MyCars() {
   const cars = ['Ford', 'BMW', 'Audi'];
   return (
     <>
@@ -1268,4 +1268,19 @@ function MyCars() {
 
 createRoot(document.getElementById('root')).render(
   <MyCars />
+);*/
+
+// Example of Add a form that allows users to enter their name.
+function MyForm() {
+  return (
+    <form>
+      <label>Enter your name:
+        <input type="text" />
+      </label>
+    </form>
+  )
+}
+
+createRoot(document.getElementById('root')).render(
+  <MyForm />
 );
