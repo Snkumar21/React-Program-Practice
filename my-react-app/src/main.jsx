@@ -1360,7 +1360,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of React uses the value attribute to control the textarea.
-function MyForm() {
+/*function MyForm() {
   const [mytxt, setMytxt] = useState("");
 
   function handleChange(e) {
@@ -1376,6 +1376,29 @@ function MyForm() {
         />
       </label>
       <p>Current value: {mytxt}</p>
+    </form>
+  )
+}
+
+createRoot(document.getElementById('root')).render(
+  <MyForm />
+);*/
+
+// Example of React Form Select.
+function MyForm() {
+  const [myCar, setMyCar] = useState("Volvo");
+
+  const handleChange = (event) => {
+    setMyCar(event.target.value)
+  }
+
+  return (
+    <form>
+      <select value={myCar} onChange={handleChange}>
+        <option value="Ford">Ford</option>
+        <option value="Volvo">Volvo</option>
+        <option value="Fiat">Fiat</option>
+      </select>
     </form>
   )
 }
