@@ -1408,8 +1408,48 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Use the useState Hook to manage the input.
-function MyForm() {
+/*function MyForm() {
   const [inputs, setInputs] = useState({});
+
+  const handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setInputs(values => ({...values, [name]: value}))
+  }
+
+  return (
+    <form>
+      <label>First name:
+      <input 
+        type="text" 
+        name="firstname" 
+        value={inputs.firstname} 
+        onChange={handleChange}
+      />
+      </label>
+      <label>Last name:
+        <input 
+          type="text" 
+          name="lastname" 
+          value={inputs.lastname} 
+          onChange={handleChange}
+        />
+        </label>
+        <p>Current values: {inputs.firstname} {inputs.lastname}</p>
+    </form>
+  )
+}
+
+createRoot(document.getElementById('root')).render(
+  <MyForm />
+);*/
+
+// Example of Use initial values for firstname and lastname
+function MyForm() {
+  const [inputs, setInputs] = useState({
+    firstname: 'John',
+    lastname: 'Doe'
+  });
 
   const handleChange = (e) => {
     const name = e.target.name;
