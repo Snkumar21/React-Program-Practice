@@ -1713,7 +1713,7 @@ createRoot(document.getElementById('root')).render(
 )*/
 
 // Example of Event Bubbling in Portals
-function PortalButton({ onClick, children }) {
+/*function PortalButton({ onClick, children }) {
   return createPortal(
     <button 
       onClick={onClick}
@@ -1758,6 +1758,23 @@ function App() {
         }}>
         Floating Button
       </PortalButton>
+    </div>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <App />
+);*/
+
+// Example of Using Suspense
+import MyFruits from './Fruits';
+
+function App() {
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <MyFruits />
+      </Suspense>
     </div>
   );
 }
