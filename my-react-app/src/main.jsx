@@ -1783,9 +1783,28 @@ createRoot(document.getElementById('root')).render(
   <App />
 );*/
 
-// Example of Using Suspense with lazy Loading
-import Cars from './Cars';
+// Example of Using Suspense without lazy Loading.
+/*import Cars from './Cars';
 // Click the "cars.jsx" tab to see the content of the "Cars.jsx" file
+
+function App() {
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Cars />
+      </Suspense>
+    </div>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <App />
+);*/
+
+// Example of Using Suspense without lazy Loading.
+import { Suspense, lazy } from 'react';
+
+const Cars = lazy(() => import('./Cars'));
 
 function App() {
   return (
