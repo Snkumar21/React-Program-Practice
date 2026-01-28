@@ -1767,13 +1767,31 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Using Suspense
-import MyFruits from './Fruits';
+/*import MyFruits from './Fruits';
 
 function App() {
   return (
     <div>
       <Suspense fallback={<div>Loading...</div>}>
         <MyFruits />
+      </Suspense>
+    </div>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <App />
+);*/
+
+// Example of Using Suspense with lazy Loading
+import Cars from './Cars';
+// Click the "cars.jsx" tab to see the content of the "Cars.jsx" file
+
+function App() {
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Cars />
       </Suspense>
     </div>
   );
