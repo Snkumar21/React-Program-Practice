@@ -1860,10 +1860,30 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of camelCased Property Names.
-const Header = () => {
+/*const Header = () => {
   return (
     <>
       <h1 style={{backgroundColor: "lightblue"}}>Hello Style!</h1>
+      <p>Add a little style!</p>
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Header />
+);*/
+
+// Example of JavaScript Object
+const Header = () => {
+  const myStyle = {
+    color: "white",
+    backgroundColor: "DodgerBlue",
+    padding: "10px",
+    fontFamily: "Sans-Serif"
+  };
+  return (
+    <>
+      <h1 style={myStyle}>Hello Style!</h1>
       <p>Add a little style!</p>
     </>
   );
