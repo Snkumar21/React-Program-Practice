@@ -1938,7 +1938,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Multiple Classes
-import styles from './Button.module.css';
+/*import styles from './Button.module.css';
 
 function App() {
   return (
@@ -1950,6 +1950,28 @@ function App() {
       <br/>
       <button className={`${styles.mybutton} ${styles.secondary}`}>
         My Secondary Button
+      </button>
+    </div>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <App />
+);*/
+
+// Example of 
+import styles from './Button.module.css';
+
+function App() {
+  return (
+    <div>
+      <button className={styles.primary}>
+        Primary Button
+      </button>
+      <br/>
+      <br/>
+      <button className={styles.secondary}>
+        Secondary Button
       </button>
     </div>
   );
