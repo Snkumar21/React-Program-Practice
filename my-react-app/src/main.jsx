@@ -1874,7 +1874,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of JavaScript Object
-const Header = () => {
+/*const Header = () => {
   const myStyle = {
     color: "white",
     backgroundColor: "DodgerBlue",
@@ -1885,6 +1885,22 @@ const Header = () => {
     <>
       <h1 style={myStyle}>Hello Style!</h1>
       <p>Add a little style!</p>
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Header />
+);*/
+
+// Example of 
+import './MyStylesheet.css';
+
+const Header = () => {
+  return (
+    <>
+      <h1>Hello Style!</h1>
+      <p>Add a little style!.</p>
     </>
   );
 }
