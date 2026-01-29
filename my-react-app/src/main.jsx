@@ -1821,7 +1821,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Multiple Components.
-import { Suspense, lazy } from 'react';
+/*import { Suspense, lazy } from 'react';
 
 const Header = lazy(() => import('./Header'));
 const Content = lazy(() => import('./Content'));
@@ -1843,4 +1843,18 @@ function App() {
 
 createRoot(document.getElementById('root')).render(
   <App />
+);*/
+
+// Example of Inline Styling
+const Header = () => {
+  return (
+    <>
+      <h1 style={{color: "red"}}>Hello Style!</h1>
+      <p>Add a little style!</p>
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Header />
 );
