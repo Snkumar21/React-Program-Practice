@@ -1921,13 +1921,35 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Using a CSS Module.
-import styles from './Button.module.css';
+/*import styles from './Button.module.css';
 
 function App() {
   return (
     <div>
       <button className={styles.mybutton}>
         My Button
+      </button>
+    </div>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <App />
+);*/
+
+// Example of Multiple Classes
+import styles from './Button.module.css';
+
+function App() {
+  return (
+    <div>
+      <button className={`${styles.mybutton} ${styles.primary}`}>
+        My Primary Button
+      </button>
+      <br/>
+      <br/>
+      <button className={`${styles.mybutton} ${styles.secondary}`}>
+        My Secondary Button
       </button>
     </div>
   );
