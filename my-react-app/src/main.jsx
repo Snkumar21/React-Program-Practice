@@ -1893,8 +1893,8 @@ createRoot(document.getElementById('root')).render(
   <Header />
 );*/
 
-// Example of 
-import './MyStylesheet.css';
+// Example of CSS Stylesheet
+/*import './MyStylesheet.css';
 
 const Header = () => {
   return (
@@ -1907,4 +1907,15 @@ const Header = () => {
 
 createRoot(document.getElementById('root')).render(
   <Header />
+);*/
+
+// Example of 
+import styles from './my-style.module.css'; 
+  
+const Car = () => {
+  return <h1 className={styles.bigred}>Hello Car!</h1>;
+}
+  
+createRoot(document.getElementById('root')).render(
+  <Car />
 );
