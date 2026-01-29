@@ -1909,8 +1909,8 @@ createRoot(document.getElementById('root')).render(
   <Header />
 );*/
 
-// Example of 
-import styles from './my-style.module.css'; 
+// Example of import styles to import the stylesheet
+/*import styles from './my-style.module.css'; 
   
 const Car = () => {
   return <h1 className={styles.bigred}>Hello Car!</h1>;
@@ -1918,4 +1918,21 @@ const Car = () => {
   
 createRoot(document.getElementById('root')).render(
   <Car />
+);*/
+
+// Example of Using a CSS Module.
+import styles from './Button.module.css';
+
+function App() {
+  return (
+    <div>
+      <button className={styles.mybutton}>
+        My Button
+      </button>
+    </div>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <App />
 );
