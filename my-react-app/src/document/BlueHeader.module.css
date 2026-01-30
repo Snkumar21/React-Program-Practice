@@ -1,0 +1,6 @@
+:global(.myheader) {
+  padding: 10px 20px;
+  font-size: 50px;
+  color: white;
+  background-color: dodgerblue;
+}

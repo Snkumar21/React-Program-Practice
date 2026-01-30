@@ -1960,7 +1960,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Composing Classes.
-import styles from './Button.module.css';
+/*import styles from './Button.module.css';
 
 function App() {
   return (
@@ -1973,6 +1973,23 @@ function App() {
       <button className={styles.secondary}>
         Secondary Button
       </button>
+    </div>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <App />
+);*/
+
+// Example of Global Classes
+import styles from './BlueHeader.module.css';
+
+function App() {
+  return (
+    <div>
+      <h1 className="myheader">
+        My Header
+      </h1>
     </div>
   );
 }
