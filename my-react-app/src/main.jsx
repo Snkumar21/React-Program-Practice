@@ -2040,7 +2040,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Props in Styled Components.
-import styled from 'styled-components';
+/*import styled from 'styled-components';
 
 const Button = styled.button`
   padding: 10px 20px;
@@ -2058,6 +2058,38 @@ function App() {
       <br />
       <br />
       <Button>Secondary Button</Button>
+    </div>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <App />
+);*/
+
+// Example of Extending Styles.
+import styled from 'styled-components';
+
+const Button = styled.button`
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+`;
+
+const PrimaryButton = styled(Button)`
+  background-color: #007bff;
+`;
+
+const SuccessButton = styled(Button)`
+  background-color: #28a745;
+`;
+
+function App() {
+  return (
+    <div>
+      <PrimaryButton>Primary</PrimaryButton>
+      <SuccessButton>Success</SuccessButton>
     </div>
   );
 }
