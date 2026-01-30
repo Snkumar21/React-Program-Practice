@@ -1999,7 +1999,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Combine Global and Local Classes
-import styles from './MyStyles.module.css';
+/*import styles from './MyStyles.module.css';
 
 function App() {
   return (
@@ -2011,6 +2011,27 @@ function App() {
         My Paragraph
       </p>
     </div>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <App />
+);*/
+
+// Example of CSS-in-JS.
+import styled from 'styled-components';
+
+const MyHeader = styled.h1`
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+`;
+
+function App() {
+  return (
+    <>
+      <MyHeader>Welcome!</MyHeader>
+    </>
   );
 }
 
