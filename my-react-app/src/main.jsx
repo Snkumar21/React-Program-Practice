@@ -1982,7 +1982,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Global Classes
-import styles from './BlueHeader.module.css';
+/*import styles from './BlueHeader.module.css';
 
 function App() {
   return (
@@ -1990,6 +1990,26 @@ function App() {
       <h1 className="myheader">
         My Header
       </h1>
+    </div>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <App />
+);*/
+
+// Example of Combine Global and Local Classes
+import styles from './MyStyles.module.css';
+
+function App() {
+  return (
+    <div>
+      <h1 className="myheader">
+        My Header
+      </h1>
+      <p className={styles.myparagraph}>
+        My Paragraph
+      </p>
     </div>
   );
 }

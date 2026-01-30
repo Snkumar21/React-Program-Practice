@@ -1,0 +1,12 @@
+:global(.myheader) {
+  padding: 10px 20px;
+  font-size: 50px;
+  color: white;
+  background-color: dodgerblue;
+}
+
+.myparagraph {
+  font-size: 20px;
+  color: white;
+  background-color: purple;
+}
