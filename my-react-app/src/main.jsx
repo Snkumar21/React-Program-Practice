@@ -2019,7 +2019,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of CSS-in-JS.
-import styled from 'styled-components';
+/*import styled from 'styled-components';
 
 const MyHeader = styled.h1`
   padding: 10px 20px;
@@ -2032,6 +2032,33 @@ function App() {
     <>
       <MyHeader>Welcome!</MyHeader>
     </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <App />
+);*/
+
+// Example of Props in Styled Components.
+import styled from 'styled-components';
+
+const Button = styled.button`
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: ${props => props.btntype === 'primary' ? '#007bff' : '#6c757d'};
+  color: white;
+  cursor: pointer;
+`;
+
+function App() {
+  return (
+    <div>
+      <Button btntype="primary">Primary Button</Button>
+      <br />
+      <br />
+      <Button>Secondary Button</Button>
+    </div>
   );
 }
 
