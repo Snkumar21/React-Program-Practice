@@ -2067,7 +2067,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Extending Styles.
-import styled from 'styled-components';
+/*import styled from 'styled-components';
 
 const Button = styled.button`
   padding: 10px 20px;
@@ -2091,6 +2091,36 @@ function App() {
       <PrimaryButton>Primary</PrimaryButton>
       <SuccessButton>Success</SuccessButton>
     </div>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <App />
+);*/
+
+// Example of Global Styles.
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+  h1 {
+    color: white;
+    background-color: purple;
+    font-family: Arial, sans-serif;
+  }
+
+  .myparagraph {
+    font-family: courier, monospace;
+    color: blue;
+  }
+`;
+
+function App() {
+  return (
+    <>
+      <GlobalStyle />
+      <h1>Welcome!</h1>
+      <p className="myparagraph">This paragraph is styled with global styles.</p>
+    </>
   );
 }
 
