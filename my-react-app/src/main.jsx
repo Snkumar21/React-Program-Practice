@@ -1959,7 +1959,7 @@ createRoot(document.getElementById('root')).render(
   <App />
 );*/
 
-// Example of 
+// Example of Composing Classes.
 import styles from './Button.module.css';
 
 function App() {
