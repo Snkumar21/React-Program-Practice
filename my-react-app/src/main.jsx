@@ -2353,7 +2353,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Real-World Example of Transitions.
-import { useState, useTransition } from 'react';
+/*import { useState, useTransition } from 'react';
 
 function SearchResults({ query }) {
   // Simulate slow search results
@@ -2391,6 +2391,32 @@ function App() {
       />
       {isPending && <p>Loading results...</p>}
       <SearchResults query={query} />
+    </div>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <App />
+);*/
+
+// Example of forwardRef.
+import { forwardRef, useRef } from 'react';
+
+const MyInput = forwardRef((props, ref) => (
+  <input ref={ref} {...props} />
+));
+
+function App() {
+  const inputRef = useRef();
+
+  const focusInput = () => {
+    inputRef.current.focus();
+  };
+
+  return (
+    <div>
+      <MyInput ref={inputRef} placeholder="Type here..." />
+      <button onClick={focusInput}>Focus Input</button>
     </div>
   );
 }
