@@ -2245,7 +2245,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Style Active Links.
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
+/*import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 
 // Style function for active links
 const navLinkStyles = ({ isActive }) => ({
@@ -2270,18 +2270,46 @@ function Contact() {
 function App() {
   return (
     <BrowserRouter>
-      {/* Navigation with NavLink for active styling */}
+      { Navigation with NavLink for active styling }
       <nav style={{ marginBottom: '20px' }}>
         <NavLink to="/" style={navLinkStyles}>Home</NavLink> |{" "}
         <NavLink to="/about" style={navLinkStyles}>About</NavLink> |{" "}
         <NavLink to="/contact" style={navLinkStyles}>Contact</NavLink>
       </nav>
 
-      {/* Routes */}
+      { Routes }
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <App />
+);*/
+
+// Example of URL Parameters.
+import { BrowserRouter, Routes, Route, Link, useParams } from 'react-router-dom';
+
+function Info() {
+  const { firstname } = useParams();
+  return <h1>Hello, {firstname}!</h1>;
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <nav>
+        <Link to="/customer/Emil">Emil</Link> | 
+        <Link to="/customer/Tobias">Tobias</Link> |
+        <Link to="/customer/Linus">Linus</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/customer/:firstname" element={<Info />} />
       </Routes>
     </BrowserRouter>
   );
