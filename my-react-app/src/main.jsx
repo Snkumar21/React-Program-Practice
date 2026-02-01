@@ -2489,7 +2489,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of React Hook.
-function FavoriteColor() {
+/*function FavoriteColor() {
   const [color, setColor] = useState("red");
 
   return (
@@ -2513,6 +2513,19 @@ function FavoriteColor() {
       >Green</button>
     </>
   );
+}
+
+createRoot(document.getElementById('root')).render(
+  <FavoriteColor />
+);*/
+
+// Example of useState Hook
+import { useState } from 'react';
+
+function FavoriteColor() {
+  const [color, setColor] = useState("red");
+
+  return <h1>My favorite color is {color}!</h1>
 }
 
 createRoot(document.getElementById('root')).render(
