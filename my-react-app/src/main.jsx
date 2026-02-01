@@ -2472,7 +2472,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Sass Modules
-import './MyStyle.scss';
+/*import './MyStyle.scss';
 
 function MyHeader() {
   return (
@@ -2486,4 +2486,35 @@ function MyHeader() {
 
 createRoot(document.getElementById('root')).render(
   <MyHeader />
+);*/
+
+// Example of React Hook.
+function FavoriteColor() {
+  const [color, setColor] = useState("red");
+
+  return (
+    <>
+      <h1>My favorite color is {color}!</h1>
+      <button
+        type="button"
+        onClick={() => setColor("blue")}
+      >Blue</button>
+      <button
+        type="button"
+        onClick={() => setColor("red")}
+      >Red</button>
+      <button
+        type="button"
+        onClick={() => setColor("pink")}
+      >Pink</button>
+      <button
+        type="button"
+        onClick={() => setColor("green")}
+      >Green</button>
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <FavoriteColor />
 );
