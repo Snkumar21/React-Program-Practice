@@ -2426,7 +2426,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Higher Order Component.
-// A HOC that adds a border to any component
+/*// A HOC that adds a border to any component
 function withBorder(WrappedComponent) {
   return function NewComponent(props) {
     return (
@@ -2456,4 +2456,17 @@ function App() {
 
 createRoot(document.getElementById('root')).render(
   <App />
+);*/
+
+// Example of Import the Sass file.
+import './MyStyle.scss';
+
+function MyHeader() {
+  return (
+    <h1>My Header</h1>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <MyHeader />
 );
