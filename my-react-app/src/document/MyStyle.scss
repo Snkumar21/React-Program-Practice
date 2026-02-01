@@ -8,13 +8,13 @@ h1 {
 $myColor: red;
 
 h1 {
-  color: $myColor;
+    color: $myColor;
 }
 
 h2 {
-  color: color.adjust($myColor, $lightness: -20%);
+    color: color.adjust($myColor, $lightness: -20%);
 }
 
 h3 {
-  color: color.adjust($myColor, $lightness: 20%);
+    color: color.adjust($myColor, $lightness: 20%);
 }
