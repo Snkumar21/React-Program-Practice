@@ -2552,7 +2552,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of multiple state Hooks.
-function MyCar() {
+/*function MyCar() {
   const [brand, setBrand] = useState("Ford");
   const [model, setModel] = useState("Mustang");
   const [year, setYear] = useState("1964");
@@ -2563,6 +2563,29 @@ function MyCar() {
       <h1>My {brand}</h1>
       <p>
         It is a {color} {model} from {year}.
+      </p>
+    </>
+  )
+}
+
+createRoot(document.getElementById('root')).render(
+  <MyCar />
+);*/
+
+// Example of single Hook that holds an object.
+function MyCar() {
+  const [car, setCar] = useState({
+    brand: "Ford",
+    model: "Mustang",
+    year: "1964",
+    color: "red"
+  });
+
+  return (
+    <>
+      <h1>My {car.brand}</h1>
+      <p>
+        It is a {car.color} {car.model} from {car.year}.
       </p>
     </>
   )
