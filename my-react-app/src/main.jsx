@@ -2533,7 +2533,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Update State Hook.
-function FavoriteColor() {
+/*function FavoriteColor() {
   const [color, setColor] = useState("red");
 
   return (
@@ -2549,4 +2549,25 @@ function FavoriteColor() {
 
 createRoot(document.getElementById('root')).render(
   <FavoriteColor />
+);*/
+
+// Example of multiple state Hooks.
+function MyCar() {
+  const [brand, setBrand] = useState("Ford");
+  const [model, setModel] = useState("Mustang");
+  const [year, setYear] = useState("1964");
+  const [color, setColor] = useState("red");
+
+  return (
+    <>
+      <h1>My {brand}</h1>
+      <p>
+        It is a {color} {model} from {year}.
+      </p>
+    </>
+  )
+}
+
+createRoot(document.getElementById('root')).render(
+  <MyCar />
 );
