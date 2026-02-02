@@ -2573,7 +2573,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of single Hook that holds an object.
-function MyCar() {
+/*function MyCar() {
   const [car, setCar] = useState({
     brand: "Ford",
     model: "Mustang",
@@ -2587,6 +2587,39 @@ function MyCar() {
       <p>
         It is a {car.color} {car.model} from {car.year}.
       </p>
+    </>
+  )
+}
+
+createRoot(document.getElementById('root')).render(
+  <MyCar />
+);*/
+
+// Example of Updating Objects and Arrays in State.
+function MyCar() {
+  const [car, setCar] = useState({
+    brand: "Ford",
+    model: "Mustang",
+    year: "1964",
+    color: "red"
+  });
+
+  const updateColor = () => {
+    setCar(previousState => {
+      return { ...previousState, color: "blue" }
+    });
+  }
+
+  return (
+    <>
+      <h1>My {car.brand}</h1>
+      <p>
+        It is a {car.color} {car.model} from {car.year}.
+      </p>
+      <button
+        type="button"
+        onClick={updateColor}
+      >Blue</button>
     </>
   )
 }
