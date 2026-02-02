@@ -2519,13 +2519,32 @@ createRoot(document.getElementById('root')).render(
   <FavoriteColor />
 );*/
 
-// Example of useState Hook
-import { useState } from 'react';
+// Example of useState Hook - Read State.
+/*import { useState } from 'react';
 
 function FavoriteColor() {
   const [color, setColor] = useState("red");
 
   return <h1>My favorite color is {color}!</h1>
+}
+
+createRoot(document.getElementById('root')).render(
+  <FavoriteColor />
+);*/
+
+// Example of Update State Hook.
+function FavoriteColor() {
+  const [color, setColor] = useState("red");
+
+  return (
+    <>
+      <h1>My favorite color is {color}!</h1>
+      <button
+        type="button"
+        onClick={() => setColor("blue")}
+      >Blue</button>
+    </>
+  )
 }
 
 createRoot(document.getElementById('root')).render(
