@@ -2629,7 +2629,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of setTimeout() to count 1 second after initial render.
-function Timer() {
+/*function Timer() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -2637,6 +2637,23 @@ function Timer() {
       setCount((count) => count + 1);
     }, 1000);
   });
+
+  return <h1>I've rendered {count} times!</h1>;
+}
+
+createRoot(document.getElementById('root')).render(
+  <Timer />
+);*/
+
+// Example of Only run the effect on the initial render
+function Timer() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 1000);
+  }, []); // <- add empty brackets here
 
   return <h1>I've rendered {count} times!</h1>;
 }
