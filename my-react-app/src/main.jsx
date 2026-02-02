@@ -2596,7 +2596,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Updating Objects and Arrays in State.
-function MyCar() {
+/*function MyCar() {
   const [car, setCar] = useState({
     brand: "Ford",
     model: "Mustang",
@@ -2626,4 +2626,21 @@ function MyCar() {
 
 createRoot(document.getElementById('root')).render(
   <MyCar />
+);*/
+
+// Example of setTimeout() to count 1 second after initial render.
+function Timer() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 1000);
+  });
+
+  return <h1>I've rendered {count} times!</h1>;
+}
+
+createRoot(document.getElementById('root')).render(
+  <Timer />
 );
