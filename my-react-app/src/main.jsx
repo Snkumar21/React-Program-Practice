@@ -2739,7 +2739,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of React Context.
-const UserContext = createContext();
+/*const UserContext = createContext();
 
 function Component1() {
   const [user, setUser] = useState("Linus");
@@ -2774,4 +2774,24 @@ function Component3() {
 
 createRoot(document.getElementById('root')).render(
   <Component1 />
+);*/
+
+// Example of Use useRef to focus the input.
+function App() {
+  const inputElement = useRef();
+
+  const focusInput = () => {
+    inputElement.current.focus();
+  };
+
+  return (
+    <>
+      <input type="text" ref={inputElement} />
+      <button onClick={focusInput}>Focus Input</button>
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <App />
 );
