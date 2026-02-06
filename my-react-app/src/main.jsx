@@ -2645,8 +2645,8 @@ createRoot(document.getElementById('root')).render(
   <Timer />
 );*/
 
-// Example of Only run the effect on the initial render
-function Timer() {
+// Example of Only run the effect on the initial render.
+/*function Timer() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -2660,4 +2660,26 @@ function Timer() {
 
 createRoot(document.getElementById('root')).render(
   <Timer />
+);*/
+
+// Example of  a useEffect Hook that is dependent on a variable.
+function Counter() {
+  const [count, setCount] = useState(0);
+  const [calculation, setCalculation] = useState(0);
+
+  useEffect(() => {
+    setCalculation(() => count * 2);
+  }, [count]); // <- add the count variable here
+
+  return (
+    <>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount((c) => c + 1)}>+</button>
+      <p>Calculation: {calculation}</p>
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <Counter />
 );
