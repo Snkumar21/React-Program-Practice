@@ -2777,7 +2777,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Use useRef to focus the input.
-function App() {
+/*function App() {
   const inputElement = useRef();
 
   const focusInput = () => {
@@ -2788,6 +2788,32 @@ function App() {
     <>
       <input type="text" ref={inputElement} />
       <button onClick={focusInput}>Focus Input</button>
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <App />
+);*/
+
+// Example of Use useRef to keep track of previous state values.
+function App() {
+  const [inputValue, setInputValue] = useState("");
+  const previousInputValue = useRef("");
+
+  useEffect(() => {
+    previousInputValue.current = inputValue;
+  }, [inputValue]);
+
+  return (
+    <>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
+      <h2>Current Value: {inputValue}</h2>
+      <h2>Previous Value: {previousInputValue.current}</h2>
     </>
   );
 }
