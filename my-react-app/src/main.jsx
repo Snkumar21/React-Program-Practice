@@ -3001,7 +3001,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of React useMemo Hook.
-const App = () => {
+/*const App = () => {
   const [count, setCount] = useState(0);
   const [todos, setTodos] = useState([]);
   const calculation = useMemo(() => expensiveCalculation(count), [count]);
@@ -3044,4 +3044,28 @@ const expensiveCalculation = (num) => {
 
 createRoot(document.getElementById('root')).render(
   <App />
+);*/
+
+// Example of Build a Hook.
+const Home = () => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/todos")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+ }, []);
+
+  return (
+    <>
+      {data &&
+        data.map((item) => {
+          return <p key={item.id}>{item.title}</p>;
+        })}
+    </>
+  );
+};
+
+createRoot(document.getElementById('root')).render(
+  <Home />
 );
