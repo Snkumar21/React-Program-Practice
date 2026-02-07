@@ -3047,7 +3047,7 @@ createRoot(document.getElementById('root')).render(
 );*/
 
 // Example of Build a Hook.
-const Home = () => {
+/*const Home = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -3055,6 +3055,24 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setData(data));
  }, []);
+
+  return (
+    <>
+      {data &&
+        data.map((item) => {
+          return <p key={item.id}>{item.title}</p>;
+        })}
+    </>
+  );
+};
+
+createRoot(document.getElementById('root')).render(
+  <Home />
+);*/
+
+// Example of Import and use the newly created custom Hook.
+const Home = () => {
+  const [data] = useFetch("https://jsonplaceholder.typicode.com/todos");
 
   return (
     <>
